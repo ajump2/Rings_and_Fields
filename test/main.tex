@@ -31,7 +31,7 @@ and we can reduce the coefficients $a,b\mod_8$ to see $b=3$ and $a=2$, which sho
 
 23. I was also asked to show determine the units of the Gaussian integers. to accomplish this I choose $a+bi,c+di\in\mathbb{Z}[i]$ and found,
 \[\begin{maxima}
-f:expand((a+b*%i)*(c+d*%i)),     /* Integrating it */
+f:expand((a+b*%i)*(c+d*%i)),
 tex(realpart(f)),
 print("+"),
 tex(imagpart(f)*i)
@@ -46,10 +46,9 @@ $$\begin{cases}
 These can be evaluated and parameterized as,$\begin{maxima*}
 l1:[realpart(f)=1,imagpart(f)=0],
 sol:solve(l1,[a,b,c,d]),
-for i : 1 thru length (%rnum_list) do(
-sol : subst (t[i], %rnum_list[i], sol)),
-map(printfunc,sol[1])
-\end{maxima*}$\[\begin{cases}\maximacurrent\end{cases}\]
-$\begin{maxima*}map(printfunc,sol[2])\end{maxima*}$\[\begin{cases}\maximacurrent\end{cases}\]$\begin{maxima*}map(printfunc,sol[3])\end{maxima*}$\[\begin{cases}\maximacurrent\end{cases}\]
-Throwing out the first system, as $t_{1}^2+t_{2}^2\neq 1$ and so we wouldn't get an integer solution. We can determine that the units of $\mathbb{Z}[i]$ are $1,-1,i,-i$.
+for i:1 thru length(%rnum_list) do(
+sol:subst(t[i], %rnum_list[i], sol))
+\end{maxima*}$
+\[\imaxima{map(lambda([i],print("\\begin{cases}"),map(printfunc,i),print("\\end{cases}")),sol)}\]
+Throwing out the first system, as $t_{1}^2+t_{2}^2\neq 1$ for any rational $t_{1,2}$, and so we wouldn't get an integer solution. We can determine that the units of $\mathbb{Z}[i]$ are $1,-1,i,-i$.
 \end{document}

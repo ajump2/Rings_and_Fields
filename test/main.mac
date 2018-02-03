@@ -31,7 +31,7 @@ tex(eq1)
 ,print(rbrace))$
 
 with_stdout("main.mxp", print("\\gdef\\mxpiv",lbrace),
-f:expand((a+b*%i)*(c+d*%i)),     /* Integrating it */
+f:expand((a+b*%i)*(c+d*%i)),
 tex(realpart(f)),
 print("+"),
 tex(imagpart(f)*i)
@@ -46,16 +46,11 @@ map(printfunc,ar1)
 with_stdout("main.mxp", print("\\gdef\\mxpvi",lbrace),
 l1:[realpart(f)=1,imagpart(f)=0],
 sol:solve(l1,[a,b,c,d]),
-for i : 1 thru length (%rnum_list) do(
-sol : subst (t[i], %rnum_list[i], sol)),
-map(printfunc,sol[1])
+for i:1 thru length(%rnum_list) do(
+sol:subst(t[i], %rnum_list[i], sol))
 
 ,print(rbrace))$
 
 with_stdout("main.mxp", print("\\gdef\\mxpvii",lbrace),
-map(printfunc,sol[2])
-,print(rbrace))$
-
-with_stdout("main.mxp", print("\\gdef\\mxpviii",lbrace),
-map(printfunc,sol[3])
+map(lambda([i],print("\\begin{cases}"),map(printfunc,i),print("\\end{cases}")),sol)
 ,print(rbrace))$

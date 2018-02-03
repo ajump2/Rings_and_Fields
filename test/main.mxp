@@ -20,20 +20,24 @@ a\,c-b\,d=0\\
 a\,d+b\,c=1\\ 
 } 
 \gdef\mxpvi { 
+} 
+\gdef\mxpvii { 
+\begin{cases} 
 a={{t_{1}}\over{t_{2}^2+t_{1}^2}}\\ 
 b=-{{t_{2}}\over{t_{2}^2+t_{1}^2}}\\ 
 c=t_{1}\\ 
 d=t_{2}\\ 
-} 
-\gdef\mxpvii { 
+\end{cases} 
+\begin{cases} 
 a={{1}\over{t_{3}}}\\ 
 b=0\\ 
 c=t_{3}\\ 
 d=0\\ 
-} 
-\gdef\mxpviii { 
+\end{cases} 
+\begin{cases} 
 a=0\\ 
 b=-{{1}\over{t_{4}}}\\ 
 c=0\\ 
 d=t_{4}\\ 
+\end{cases} 
 } 
