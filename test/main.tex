@@ -1,0 +1,55 @@
+% main.tex
+\documentclass[preview,border=12pt,12pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{maxiplot}
+
+\begin{document}
+
+\section{Solutions}
+54. As an exercise, I was asked to show $4x^2+6x+3$ is a unit of $\mathbb{Z}_8[x]$, choosing our multiple as $ax+b$ we find
+\[
+\begin{maxima}
+eq1:4*x^2+6*x+3,
+eq2:a*x+b,
+eq3:expand(eq1*eq2),
+tex(eq3)
+\end{maxima}
+\]
+which gives us the system of equations,$\begin{maxima*}
+indexpower(equ,var):= hipow(equ,var),
+powers(poly,var):= reverse(create_list(i,i,0,indexpower(poly,var))),
+polycoeff(poly,var):=map(lambda([i],coeff(poly,x,i)),powers(poly,var)),
+systemeq(eq,var,list):=map("=",polycoeff(eq,var),list),
+printfunc(i):=print(concat(tex1(i),"\\\\")),
+map(printfunc,systemeq(eq3,x,[0,0,0,1]))
+\end{maxima*}$
+\[\begin{cases}
+\maximacurrent
+\end{cases}\]
+and we can reduce the coefficients $a,b\mod_8$ to see $b=3$ and $a=2$, which shows $\imaxima{tex(eq1)}$ is a unit of $\mathbb{Z}_8[x]$\\
+
+23. I was also asked to show determine the units of the Gaussian integers. to accomplish this I choose $a+bi,c+di\in\mathbb{Z}[i]$ and found,
+\[\begin{maxima}
+f:expand((a+b*%i)*(c+d*%i)),     /* Integrating it */
+tex(realpart(f)),
+print("+"),
+tex(imagpart(f)*i)
+\end{maxima}
+\]$\begin{maxima*}
+ar1:[realpart(f)=0,imagpart(f)=1],
+map(printfunc,ar1)\end{maxima*}$
+which implies that we have the following system of equations,
+$$\begin{cases}
+\maximacurrent
+\end{cases}$$
+These can be evaluated and parameterized as,$\begin{maxima*}
+l1:[realpart(f)=1,imagpart(f)=0],
+sol:solve(l1,[a,b,c,d]),
+for i : 1 thru length (%rnum_list) do(
+sol : subst (t[i], %rnum_list[i], sol)),
+map(printfunc,sol[1])
+\end{maxima*}$\[\begin{cases}\maximacurrent\end{cases}\]
+$\begin{maxima*}map(printfunc,sol[2])\end{maxima*}$\[\begin{cases}\maximacurrent\end{cases}\]$\begin{maxima*}map(printfunc,sol[3])\end{maxima*}$\[\begin{cases}\maximacurrent\end{cases}\]
+Throwing out the first system, as $t_{1}^2+t_{2}^2\neq 1$ and so we wouldn't get an integer solution. We can determine that the units of $\mathbb{Z}[i]$ are $1,-1,i,-i$.
+\end{document}
