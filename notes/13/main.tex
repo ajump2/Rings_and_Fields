@@ -1,0 +1,41 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage[left=1cm,right=1cm,top=1cm,bottom=1cm]{geometry}
+\setlength\parindent{0pt} %for no indentation
+\usepackage{tikz}
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{definition}{Definition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{case}{Case}
+\newtheorem{subcase}{Subcase}[case]
+\newtheorem{claim}{Claim}
+\newtheorem{subclaim}{Subclaim}[claim]
+\newtheorem{fact}{Fact}
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{constr}{Construction}
+\newtheorem{question}{Question}
+\newtheorem{algo}{Algorithm}
+\newtheorem{conjecture}{Conjecture}
+%\usepackage{skull}
+\renewcommand{\qedsymbol}{\begin{flushright}
+\sc q.e.d.
+\end{flushright}}
+\newtheorem{remark}{Remark}
+
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+   \node[shape=circle,draw,inner sep=1pt] (char) {#1};}}
+\newcommand{\contra}{\[
+\Rightarrow\!\Leftarrow
+\]}
+\pagenumbering{gobble}
+\begin{document}
+\input{Selection.txt}
+\end{document}
