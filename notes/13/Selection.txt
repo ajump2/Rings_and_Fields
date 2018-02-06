@@ -11,7 +11,7 @@ The ring of integers is an integral domain.\\
 \textbf{EXAMPLE 6}\\ The ring $\mathbb{Z}_n$ of integers modulo $n$ is not an integral domain when $n$ is not prime.\\
 \textbf{EXAMPLE 7}\\ The ring $M_2(\mathbb{Z})$ of $2\times 2$ matrices over the integers is not an integral domain.\\
 \textbf{EXAMPLE 8}\\ $\mathbb{Z} \bigoplus \mathbb{Z}$ is not an integral domain.\\\\
-\begin{theorem}Let $a, b, \text{ and } c$ belong to an integral domain. If $n \neq 0$ and $ab = ac$, Then $b = c$.\end{theorem}
+\begin{theorem}Let $a, b, \text{ and } c$ belong to an integral domain. If $a \neq 0$ and $ab = ac$, Then $b = c$.\end{theorem}
 \begin{definition} Field\\
 A field is a commutative ring with unity in which every nonzero element is a unit.\\\end{definition}
 \begin{theorem}A finite integral domain is a field.\end{theorem}
