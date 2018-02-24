@@ -1,0 +1,546 @@
+\begin{definition}{Ring Homomorphism, Ring Isomorphism}
+
+A \textit{ring homomorphism} $\phi$ from a ring $R$ to a ring $S$ is a mapping from
+$R$ to $S$ that preserves the two ring operations; that is, for all $a, b$ in $R$,
+
+$$\phi(a + b) = \phi(a) + \phi(b) \text{ and } \phi(ab) = \phi(a)\phi(b).$$
+
+A ring homomorphism that is both one-to-one and onto is called a
+ring \textit{isomorphism}.
+\end{definition}
+
+\textbf{EXAMPLE} 1 For any positive integer $n$, the mapping $k \rightarrow k \mod{n}$ is a
+ring homomorphism from $\mathbb{Z}$ onto $\mathbb{Z}_n$ (see Exercise 9 in Chapter 0). This
+mapping is called the \textit{natural homomorphism} from $\mathbb{Z}$ to $\mathbb{Z}_n$.
+
+\textbf{EXAMPLE} 2 The mapping $a + bi \rightarrow a - bi$ is a ring isomorphism from
+the complex numbers onto the complex numbers (see Exercise 37 in
+Chapter 6).
+
+\textbf{EXAMPLE} 4 The correspondence $\phi: x \rightarrow 5x$ from $\mathbb{Z}_4$ to $\mathbb{Z}_{10}$
+is a ring homomorphism. Although showing that $\phi(x + y) =
+\phi(x) + \phi(y)$ appears to be accomplished by the simple statement that
+$5(x + y) = 5x + 5y$, we must bear in mind that the addition on the left is
+done modulo 4, whereas the addition on the right and the multiplication on
+both sides are done modulo 10. An analogous difficulty arises in showing
+that $\phi$ preserves multiplication. So, to verify that $\phi$ preserves both operations,
+we write $x+y = 4q_1+ r_1$ and $xy = 4q_2 + r_2$, where $0\leq r_1 < 4$ and $0\leq
+r_2 <4$. Then $\phi(x +y) = \phi(r_1) = 5r_1= 5(x + y — 4q_1) = 5x + 5y - 20q_1=
+5x + 5y = \phi(x) + \phi(y)$ in $\mathbb{Z}_{10}$ Similarly, using the fact that $5 \cdot 5 = 5$ in $\mathbb{Z}_10$,
+we have $\phi(xy) = \phi(r_2) = 5r_2 = 5(xy - 4q_2) = 5xy - 20q_2 = (5 \cdot 5)xy =
+5x5y = \phi(x)\phi(y)$ in $\mathbb{Z}_{10}$.
+
+\textbf{EXAMPLE} 5 We determine all ring homomorphisms from $\mathbb{Z}_{12}$ to $\mathbb{Z}_30$. By
+Example 10 in Chapter 10, the only group homomorphisms from $\mathbb{Z}_{12}$ to
+$\mathbb{Z}_{30}$ are $x \rightarrow ax$, where $a = 0, 15, 10, 20, 5, \text{ or } 25$. But, since $1 \cdot 1 = 1$ in $\mathbb{Z}_{12}$ we must have $a \cdot a = a$ in $\mathbb{Z}_{30}$. This requirement rules out 20 and 5 as
+possibilities for $a$. Finally, simple calculations show that each of the
+remaining four choices does yield a ring homomorphism.
+
+\textbf{EXAMPLE} 6 Let $R$ be a commutative ring of characteristic 2. Then the
+mapping $a \rightarrow a^2$ is a ring homomorphism from $R$ to $R$.
+
+\textbf{EXAMPLE} 7 Although $2\mathbb{Z}$, the group of even integers under addition, is
+group-isomorphic to the group $\mathbb{Z}$ under addition, the ring $2\mathbb{Z}$ is not ring-
+isomorphic to the ring $\mathbb{Z}$. (Quick! What does $\mathbb{Z}$ have that $2\mathbb{Z}$ doesn’t?) I
+
+\textbf{EXAMPLE} 8 Test for Divisibility by 9
+An integer $n$ with decimal representation akakil - - - a0 is divisible by
+9 if and only if ak + ak71 + - - - + a0 is divisible by 9. To verify this,
+observe that n = aklOk + akillOk’1 + - - - + a0. Then, letting a denote
+the natural homomorphism from to Z9 [in particular, a(10) = l], we
+note that n is divisible by 9 if and only if
+
+0 = a(n) = a(ak)(a(10))k + a(ak71)(oz(10))k’1 + - - ‘ + a(a0)
+= a(ak) + a(ak71) + - - - + oz(ao)
+= (1(ka + ak71+ - - - + do).
+
+But a(ak + ak71+ - - - + a0) = 0is equivalent to ak + ak71+- - - + a0
+being divisible by 9. I
+
+\textbf{EXAMPLE} 9 Theorem of Gersonides
+
+In 1844 Eugene Charles Catalan conjectured that $2^3$ and $3^2$ is the only
+instance of two consecutive powers greater than 1 of natural numbers.
+That is, they are the only solution in the natural numbers of $x^m - y^n =
+1$ where $m, n, x, y > 1$. This conjecture was proved in 2002 by Preda
+Mihailescu. The special case where $x$ and $y$ are restricted to 2 and 3 was
+first proved by the Rabbi Gersonides in the fourteenth century who
+proved for $m, n >1$ the only case when $2^m = 3^n \pm 1$ is for $(m, n) = (3, 2)$.
+To verify this is so for $2^m = 3^n + 1$, observe that for all n we have $3^n \mod
+{8} = 3$ or 1. Thus, $3^n + 1 \mod{8} = 4$ or 2. On the other hand, for $m > 2$,
+we have $2^m \mod{8} = 0$. To handle the case where $2^m = 3^n -1$, we first
+note that for all $n$, $3^n \mod{16} = 3, 9, 11, \text{ or } 1$, depending on the value of
+$n \mod{4}$. Thus, $(3^n - 1) \mod{16} = 2, 8, 10, \text{ or } 0$. Since $2^m \mod{16} = 0$
+for $m \geq 4$, we have ruled out the cases Where $n \mod{4} = 1, 2, \text{ or } 3$.
+Because $3^{4k} \mod{5} = (3^4)^k \mod{5} = 1^k \mod{5}= 1$, we know that $(3^{4k} - 1)
+\mod{5} = 0$. But the only values for $2^m \mod{5}$ are $2, 4, 3, \text{ and } 1$. This
+contradiction completes the proof.
+
+\begin{theorem}{Properties of Ring Homomorphisms}
+
+Let $\phi$ be a ring homomorphism from a ring $R$ to a ring $S$. Let $A$ be a
+subring of $R$ and let $B$ be an ideal of $S$.
+\begin{enumerate}
+\item For any $r \in R$ and any positive integer $n$, $\phi(nr) = n\phi(r)$ and
+$\phi(r^n) = (\phi(r))^n$.
+
+\item $\phi(A) = \{\phi(a) \ \vert \ a \in A\}$ is a subring of $S$.
+
+\item If $A$ is an ideal and $\phi$ is onto $S$, then $\phi(A)$ is an ideal.
+
+\item $\phi^{-1}(B) = \{r \in R \ \vert \ \phi(r) \in B\}$ is an ideal of $R$.
+
+\item If $R$ is commutative, then $\phi(R)$ is commutative.
+
+\item If $R$ has a unity 1, $S \neq \{0\}$, and $\phi$ is onto, then $\phi(1)$ is the unity of $S$.
+
+\item $\phi$ is an isomorphism if and only if $\phi$ is onto and $\ker \phi =
+\{r \in R  \ \vert \ \phi(r) = 0\} = \{0\}$.
+
+\item If $\phi$ is an isomorphism from $R$ onto $S$, then $\phi^{-1}$ is an
+isomorphism from $S$ onto $R$.
+\end{enumerate}
+\end{theorem}
+
+\begin{theorem}{Kernels Are Ideals}
+
+Let $\phi$ be a ring homomorphism from a ring $R$ to a ring $S$. Then $\ker \phi
+= \{r \in R \ \vert \ \phi(r) = 0\}$ is an ideal of $R$.
+\end{theorem}
+
+\begin{theorem} {First Isomorphism Theorem for Rings}
+
+Let $\phi$ be a ring homomorphism from $R$ to $S$. Then the mapping from
+$R/\ker \phi$ to $\phi(R)$, given by $r + \ker \phi \rightarrow \phi(r)$, is an isomorphism. In
+symbols, $R/\ker \phi \approx \phi(R)$.
+\end{theorem}
+
+\begin{theorem}{Ideals Are Kernels}
+
+Every ideal of a ring $R$ is the kernel of a ring homomorphism of $R$.
+In particular, an ideal $A$ is the kernel of the mapping $r \rightarrow r + A$
+from $R$ to $R/A$.
+\end{theorem}
+
+\textbf{EXAMPLE} 10 Since the mapping $\phi$ from $\mathbb{Z}[x]$ onto $\mathbb{Z}$ given by
+$\phi(f(x)) = f(0)$ is a ring homomorphism with $\ker \phi = (x)$ (see Exercise 31
+in Chapter 14), we have, by Theorem 15.3, $\mathbb{Z}[x]/ \langle x \rangle \approx \mathbb{Z}$. And because
+$\mathbb{Z}$ is an integral domain but not a field, we know by Theorems 14.3 and
+14.4 that the ideal $\langle x \rangle$ is prime but not maximal in $\mathbb{Z}[x]$.
+
+\begin{theorem}{Homomorphism from $\mathbb{Z}$ to a Ring with Unity}
+
+Let $R$ be a ring with unity 1. The mapping $\phi: \mathbb{Z} \rightarrow R$ given by $n \rightarrow n \cdot 1$
+is a ring homomorphism.
+\end{theorem}
+
+\begin{corollary}{A Ring with Unity Contains $\mathbb{Z}_n$ or $\mathbb{Z}$}
+
+If $R$ is a ring with unity and the characteristic of $R$ is $n > 0$, then
+$R$ contains a subring isomorphic to $\mathbb{Z}_n$. If the characteristic of $R$ is 0,
+then $R$ contains a subring isomorphic to $\mathbb{Z}$.
+\end{corollary}
+
+\begin{corollary}{$\mathbb{Z}_m$ Is a Homomorphic Image of $\mathbb{Z}$}
+
+For any positive integer $m$, the mapping of $\phi: \mathbb{Z} \rightarrow \mathbb{Z}_m $given by $x \rightarrow
+x \mod{m}$ is a ring homomorphism.
+\end{corollary}
+
+\begin{corollary}{A Field Contains $\mathbb{Z}_p$ or $\mathbb{Q}$ (Steinitz, 1910)}
+
+If $F$ is a field of characteristic $p$, then $F$ contains a subfield
+isomorphic to $\mathbb{Z}_p$. If $F$ is a field of characteristic 0, then $F$ contains
+a subfield isomorphic to the rational numbers.
+\end{corollary}
+
+\begin{theorem}{Field of Quotients}
+
+Let $D$ be an integral domain. Then there exists a field $F$ (called the
+field of quotients of $D$) that contains a subring isomorphic to $D$.
+\end{theorem}
+
+\textbf{EXAMPLE} 11 Let $D = \mathbb{Z}[x]$. Then the field of quotients of $D$ is $\{f(x)/g(x)
+\ \vert \ f(x), g(x) \in D\}$, where $g(x)$ is not the zero polynomial.
+
+\textbf{EXAMPLE} 12 Let $p$ be a prime. Then $\mathbb{Z}_p(x) = \{f(x)/g(x) \ \vert \ f(x), g(x) \in
+\mathbb{Z}_p[x], g(x) \neq 0\}$ is an infinite field of characteristic $p$.
+
+%% Prove Theorem 15 . 1.
+%% Prove Theorem 15 .2.
+%% Prove Theorem 15 .3.
+%% Prove Theorem 15 .4.
+
+%% Show that the correspondence x —> 5x from Z5 to Z10 does not pre—
+%% serve addition.
+
+%% Show that the correspondence x —> 3x from Z4 to Z12 does not pre—
+%% serve multiplication.
+
+%% Show that the mapping (b: D —> F in the proof of Theorem 15.6 is a
+%% ring homomorphism.
+
+%% Prove that every ring homomorphism (b from Zn to itself has the
+%% form ¢(x) = ax, where a2 = a.
+
+%% Suppose that (b is a ring homomorphism from Zm to Zn. Prove that if
+%% (12(1) = a, then a2 = (1. Give an example to show that the converse is
+%% false.
+
+%% . a. Is the ring 2Z isomorphic to the ring 3Z?
+
+%% b. Is the ring 2Z isomorphic to the ring 4Z?
+
+%% . Prove that the intersection of any collection of subﬁelds of a ﬁeld F
+
+%% is a subﬁeld of F. (This exercise is referred to in this chapter.)
+
+%% . Let Z3[i] = {a + bi | a, b E Z3} (see Example 9 in Chapter 13). Show
+
+%% that the ﬁeld Z3[i] is ring-isomorphic to the ﬁeld Z3[x]/(x2 + 1).
+
+%% 13. Let
+%% S - l l ” bl
+%% —b a
+%% Show that (i): C —> S given by
+
+%% ¢(a+bi)= L: :]
+
+
+
+%% a,bER}.
+
+%% is a ring isomorphism.
+%% 14. Let Z[\@] = {a + bxfz l a, b e Z} and
+
+%% H=llz ZZl
+
+%% Show that Z[\/2] and H are isomorphic as rings.
+
+
+
+%% a,bEZ}.
+
+%% 15.
+
+%% 16.
+
+%% 17.
+
+%% 18.
+
+%% 19.
+%% . Recall that a ring element a is called an idempotent if a2 = a. Prove
+
+%% 21.
+
+%% 22.
+%% 23.
+
+%% b
+%% Consider the mapping from M2(Z) into Z given by [a d] —> a.
+%% c
+
+%% Prove or disprove that this is a ring homomorphism.
+
+%% ll: il
+
+%% a
+%% 0
+%% Is the mapping from Z5 to Z30 given by x —> 6x a ring homomor-
+%% phism? Note that the image of the unity is the unity of the image
+%% but not the unity of Z30.
+
+
+
+%% a, b, c E Z } Prove or disprove that the map-
+
+%% ping [ ] —> a is a ring homomorphism.
+%% c
+
+%% Is the mapping from Z10 to Z10 given by x —> 2x a ring homomor-
+%% phism?
+%% Describe the kernel of the homomorphism given in Example 3.
+
+%% that a ring homomorphism carries an idempotent to an idempotent.
+
+%% Determine all ring homomorphisms from Z6 to Z6. Determine all
+%% ring homomorphisms from Z20 to Z30.
+
+%% Determine all ring isomorphisms from Zn to itself.
+%% Determine all ring homomorphisms from Z to Z.
+
+%% 24.
+
+%% 25.
+
+%% 26.
+
+%% 27.
+
+%% 28.
+%% 29.
+%% 30.
+
+%% 31.
+
+%% 32.
+
+%% 33.
+
+%% Suppose (b is a ring homomorphism from Z 63 Z into Z 69 Z. What
+%% are the possibilities for ¢((1, 0))?
+
+%% Determine all ring homomorphisms from Z 63 Z into Z 63 Z.
+
+%% In Z, let A = (2) and B = (8). Show that the group A/B is isomor-
+%% phic to the group Z4 but that the ring A/B is not ring—isomorphic to
+%% the ring Z 4.
+
+%% Let R be a ring with unity and let (b be a ring homomorphism from R
+%% onto S Where S has more than one element. Prove that S has a unity.
+%% Show that (Z 69 Z)/((a) 63 (b)) is ring-isomorphic t0 Za GB Zb.
+%% Determine all ring homomorphisms from Z 63 Z to Z.
+
+%% Prove that the sum of the squares of three consecutive integers can-
+%% not be a square.
+
+%% Let m be a positive integer and let u be an integer obtained from m
+%% by rearranging the digits of m in some way. (For example, 72345 is
+%% a rearrangement of 35274.) Show that m — n is divisible by 9.
+%% (Test for Divisibility by 11) Let n be an integer with decimal repre-
+%% sentation akaki1 - - - alao. Prove that n is divisible by 11 if and only
+%% ifa0 — (11+ a2 — - ' - (—1)kak is divisible by 11.
+
+%% Show that the number 7,176,825,942,116,027,211 is divisible by 9
+%% but not divisible by 11.
+
+%% 34.
+
+%% 35.
+
+%% 36.
+
+%% 37.
+
+%% 38.
+
+%% 39.
+
+%% 40.
+
+%% 41.
+%% 42.
+%% 43.
+
+%% If m and n are positive integers, prove that the mapping from Zm to
+%% Z1 given by <b(x) = x mod n is a ring homomorphism if and only if
+%% n divides m.
+
+%% (Test for Divisibility by 3) Let n be an integer with decimal repre-
+%% sentation akakil - - - alao. Prove that n is divisible by 3 if and only
+%% ifak + akil + - - - + a1 + a0 is divisible by 3.
+
+%% (Test for Divisibility by 4) Let n be an integer with decimal repre-
+%% sentation akaki1 - - - a a0. Prove that n is divisible by 4 if and only if
+%% alao is divisible by 4.
+
+%% 1
+
+%% For any integer n > 1, prove that Zn[x]/(x) is isomorphic to Zn.
+
+%% For any integer n >1, prove that (x) is a maximal ideal of Zn[x] if
+%% and only if n is prime.
+
+%% Give an example of a ring homomorphism from a commutative ring
+%% R to a ring S that maps a zero-divisor in R to the unity of S.
+
+%% Prove that any automorphism of a ﬁeld F is the identity from the
+%% prime subﬁeld to itself.
+
+%% In your head, determine (2 - 1075 + 2)100 mod 3 and (10100 + 1)99 mod 3.
+%% Determine all ring homomorphisms from Q to Q.
+
+%% Let R and S be commutative rings with unity. If (i) is a homomor-
+%% phism from R onto S and the characteristic of R is nonzero, prove
+%% that the characteristic of S divides the characteristic of R.
+
+%% 44.
+
+%% 45.
+
+%% 46.
+
+%% 47.
+
+%% 48.
+
+%% 49.
+
+%% Let R be a commutative ring of prime characteristic p. Show that the
+
+%% Frobenius map x —> xP is a ring homomorphism from R to R.
+
+%% Is there a ring homomorphism from the reals to some ring Whose
+
+%% kernel is the integers?
+
+%% Show that a homomorphism from a ﬁeld onto a ring with more than
+
+%% one element must be an isomorphism.
+
+%% Suppose that R and S are commutative rings with unities. Let ¢ be a
+
+%% ring homomorphism from R onto S and let A be an ideal of S.
+
+%% a. IfA is prime in S, show that ¢’1(A) = {x E R | (1200 E A} is
+%% prime in R.
+
+%% b. If A is maximal in S, show that ¢’1(A) is maximal in R.
+
+%% A principal ideal ring is a ring with the property that every ideal has
+
+%% the form (a). Show that the homomorphic image of a principal ideal
+
+%% ring is a principal ideal ring.
+
+%% Let R and S be rings.
+
+%% a. Show that the mapping from R 69 S onto R given by (a, b) —> a is
+%% a ring homomorphism.
+
+%% b. Show that the mapping from R to R 63 S given by a —> (a, 0) is a
+%% one—to—one ring homomorphism.
+
+%% c. Show that R 69 S is ring—isomorphic to S 69 R.
+
+%% 50.
+
+%% 51.
+
+%% 52.
+
+%% 53.
+%% 54.
+
+%% 55.
+
+%% 56.
+
+%% 57.
+
+%% 58.
+
+%% Show that if m and n are distinct positive integers, then mZ is not
+%% ring—isomorphic to nZ.
+
+%% Prove or disprove that the ﬁeld of real numbers is ring-isomorphic
+%% to the ﬁeld of complex numbers.
+
+%% Show that the only ring automorphism of the real numbers is the
+%% identity mapping.
+
+%% Determine all ring homomorphisms from R to R.
+
+%% Suppose that n divides m and that a is an idempotent of Z]1 (that is,
+%% a2 = a). Show that the mapping x —> ax is a ring homomorphism
+%% from Zm to Z”. Show that the same correspondence need not yield a
+%% ring homomorphism if n does not divide m.
+
+%% Show that the operation of multiplication deﬁned in the proof of
+%% Theorem 15.6 is well—deﬁned.
+
+%% LetQ[\/2] = {a+b\/2la,bEQ}andQ[\/5] = {a+b\/5l
+%% a, b E Q}. Show that these two rings are not ring-isomorphic.
+
+%% Let Z[i] = {a + bi | a, b E Z}. Show that the ﬁeld of quotients of
+%% Z[i] is ring—isomorphic to Q[i] = {r + si | r, s E Q}. (This exercise
+%% is referred to in Chapter 18.)
+
+%% Let F be a ﬁeld. Show that the ﬁeld of quotients of F is ring-
+%% isomorphic to F.
+
+%% I EXAMPLE 3 Let R[x] denote the ring of all polynomials with real coef-
+%% ﬁcients. The mapping f(x) —> f(1) is a ring homomorphism from R[x]
+%% onto R. I
+
+%% 59.
+
+%% 60.
+
+%% 61.
+
+%% 62.
+%% 63.
+
+%% 64.
+
+%% 65.
+
+%% Let D be an integral domain and let F be the ﬁeld of quotients of D.
+%% Show that if E is any ﬁeld that contains D, then E contains a subﬁeld
+%% that is ring—isomorphic to F. (Thus, the ﬁeld of quotients of an inte-
+%% gral domain D is the smallest ﬁeld containing D.)
+
+%% Explain why a commutative ring with unity that is not an integral do-
+%% main cannot be contained in a ﬁeld. (Compare with Theorem 15.6.)
+%% Show that the relation E deﬁned in the proof of Theorem 15.6 is an
+%% equivalence relation.
+
+%% Give an example of a ring without unity that is contained in a ﬁeld.
+
+%% Prove that the set T in the proof of Corollary 3 to Theorem 15.5 is
+%% ring—isomorphic to the ﬁeld of rational numbers.
+
+%% Suppose that (p: R —> S is a ring homomorphism and that the image
+%% of (i) is not {0}. If R has a unity and S is an integral domain, show
+%% that (i) carries the unity of R to the unity of S. Give an example to
+%% show that the preceding statement need not be true if S is not an
+%% integral domain.
+
+%% Let f(x) E R[x]. If a + bi is a complex zero of f(x) (here i = \/——1),
+%% show that a — bi is a zero of f(x). (This exercise is referred to in
+%% Chapter 32.)
+
+%% 66.
+
+%% 67.
+
+%% 68.
+
+%% 69.
+
+%% ll: :l
+
+%% a
+%% tk
+%% aes[b
+
+
+
+%% a, b E Z}, and let ¢ be the mapping that
+
+%% b
+%% Jtoa—b.
+
+%% a
+%% a. Show that (i) is a homomorphism.
+
+%% b. Determine the kernel of ¢.
+
+%% c. Show that R/Ker (i) is isomorphic to Z.
+
+%% d. Is Ker ¢ a prime ideal?
+
+%% e. Is Ker ¢ a maximal ideal?
+
+%% Show that the prime subfield of a ﬁeld of characteristic p is ring-
+%% isomorphic to Zp and that the prime subfield of a field of charac-
+%% teristic 0 is ring-isomorphic to Q. (This exercise is referred to in
+%% this chapter.)
+
+%% Let n be a positive integer. Show that there is a ring isomorphism
+%% from Z2 to a subring of Z2” if and only if n is odd.
+
+%% Show that Zmn is ring-isomorphic to Zm EB Z]1 when m and n are rela-
+%% tively prime.
