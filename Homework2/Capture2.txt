@@ -1,0 +1,41 @@
+3. Show that a commutative ring with the cancellation property (under
+multiplication) has no zero—divisors.
+
+5. Show that every nonzero element of $\mathbb{Z}_n$ is a unit or a zero-divisor.
+
+6. Find a nonzero element in a ring that is neither a zero-divisor nor a
+unit.
+
+11. Let $d$ be an integer. Prove that $\mathbb{Z}[\sqrt{d}] = \{a + b\sqrt{d} \,\vert \, a, b \in Z\}$ is an
+integral domain. (This exercise is referred to in Chapter 18.)
+
+15. Let $a$ belong to a ring $R$ with unity and suppose that $a^n = 0$ for
+some positive integer $n$. (Such an element is called \textit{nilpotent}.) Prove
+that $1 - a$ has a multiplicative inverse in $R$. [Hints Consider ($1 - a$)
+$(1+a+a^2+\dots+a^{n-1})$.]
+
+16. Show that the nilpotent elements of a commutative ring form a subring.
+
+21. Let $R$ be the ring of real-valued continuous functions on $[-1, 1]$.
+Show that $R$ has zero-divisors.
+
+29. (Subfield Test) Let $F$ be a field and let $K$ be a subset of $F$ with at
+least two elements. Prove that $K$ is a subfield of $F$ if, for any
+$a, b \,(b\neq 0)$ in $K$, $a - b$ and $ab^{-1}$ belong to $K$.
+
+34. Prove that there is no integral domain with exactly six elements. Can
+your argument be adapted to show that there is no integral domain
+
+with exactly four elements? What about 15 elements? Use these observations to guess a general result about the number of elements in a
+finite integral domain.
+
+56. Find all solutions of $x^2 - x + 2 = 0$ over $Z_3[i]$. (See Example 9.)
+
+61. Describe the smallest subfield of the field of real numbers that con—
+tains $\sqrt{2}$. (That is, describe the subfield $K$ with the property that $K$
+contains $\sqrt{2}$ and if $F$ is any subfield containing $\sqrt{2}$, then $F$ con—
+tains $K$.)
+
+67. Suppose that $D$ is an integral domain and that $\phi$ is a nonconstant
+function from $D$ to the nonnegative integers such that $\phi(xy) =
+\phi(x)\phi(y)$. If $x$ is a unit in $D$, show that $\phi(x) = 1$.
