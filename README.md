@@ -33,3 +33,5 @@ which I copy into the directory with the screenshots and run
 ``` shell
 wolframscript <script_name>
 ```
+### Update
+Starting using gimagereader for editing
