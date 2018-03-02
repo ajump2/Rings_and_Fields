@@ -1,3 +1,5 @@
+\newcommand{\ssep}{\mid}
+\renewcommand{\ker}[1]{\text{Ker}\, #1}
 \begin{definition}{Ring Homomorphism, Ring Isomorphism}
 
 A \textit{ring homomorphism} $\phi$ from a ring $R$ to a ring $S$ is a mapping from
@@ -49,10 +51,11 @@ An integer $n$ with decimal representation $a_{k}a_{k-1} \dots a_0$ is divisible
 observe that $n = a_{k}10^k + a_{k-1}10^{k-1} + \dots + a_0$. Then, letting a denote
 the natural homomorphism from to $\mathbb{Z}_9$ [in particular, $\alpha(10) = 1$], we
 note that $n$ is divisible by 9 if and only if
+$$\begin{eqnarray*}
+  0 &=& \alpha(n) = \alpha(a_k)(\alpha(10))^k + \alpha(a_{k-1})(\alpha(10))^{k-1} + \dots + \alpha(a_0) \\
 
-$$0 = \alpha(n) = \alpha(a_k)(\alpha(10))^k + \alpha(a_{k-1})(\alpha(10))^{k-1} + \dots + \alpha(a_0)$$
-$$= \alpha(a_k) + \alpha(a_{k-1}) + \dots + \alpha(a_0)$$
-$$= \alpha(a_k + a_{k-1}+ \dots + a_0).$$
+ &=& \alpha(a_k) + \alpha(a_{k-1}) + \dots + \alpha(a_0) \\
+ &=& \alpha(a_k + a_{k-1}+ \dots + a_0). \end{eqnarray*}$$
 
 But $\alpha(a_k + a_{k-1}+ \dots + a_0) = 0$ is equivalent to $a_k + a_{k-1}+\dots + a_0$
 being divisible by 9.
@@ -165,11 +168,16 @@ field of quotients of $D$) that contains a subring isomorphic to $D$.
 
 \textbf{EXAMPLE} 12 Let $p$ be a prime. Then $\mathbb{Z}_p(x) = \{f(x)/g(x) \ \vert \ f(x), g(x) \in
 \mathbb{Z}_p[x], g(x) \neq 0\}$ is an infinite field of characteristic $p$.
-
+\newpage
+\section*{Exercises}
 %% Prove Theorem 15 . 1.
 %% Prove Theorem 15 .2.
-%% Prove Theorem 15 .3.
+\begin{enumerate}
+\item[3.1] Prove Theorem 15.3.\newline
+  We're asked to prove the \textit{First Isomorphism Theorem for Rings}, or that $r+\ker{\phi}\rightarrow \phi{(r)}$ is an isomorphism. Due to the fact that $\phi$ is a ring homomorphism from $R$ to $S$, we know that for $a,b\in R$ and $\phi{(a)},\phi{(b)}\in S$ that $\phi{(a+b)}=\phi{(a)}+\phi{(b)}$ and $\phi{(ab)}=\phi{(a)}\phi{(b)}$. We also know from Theorem 15.1.7 that $\phi$ is an isomorphism if and only if $\phi$ is onto and $\ker{\phi}=\set{r\in R \given \phi{(r)}=0}=\{0\}$. We also know from 15.2 that $\ker{\phi}$ is an ideal of $R$.
 %% Prove Theorem 15 .4.
+
+\item[3.2]Prove Theorem 15.1.6
 
 %% Show that the correspondence x —> 5x from Z5 to Z10 does not pre—
 %% serve addition.
@@ -199,31 +207,24 @@ field of quotients of $D$) that contains a subring isomorphic to $D$.
 
 %% that the ﬁeld Z3[i] is ring-isomorphic to the ﬁeld Z3[x]/(x2 + 1).
 
-%% 13. Let
-%% S - l l ” bl
-%% —b a
-%% Show that (i): C —> S given by
+\item[13.] Let
+\[S=\set[\bigg]{\begin{bmatrix}a&b\\-b&a \end{bmatrix} \given a,b\in\mathbb{R}}\]
+Show that $\phi: \mathbb{C} \rightarrow S$ given by
 
-%% ¢(a+bi)= L: :]
+\[\phi(a+bi)= \begin{bmatrix}a&b\\-b&a \end{bmatrix}\]
 
+is a ring isomorphism.
 
+\item[14.] Let $\mathbb{Z}[\sqrt{2}] = \{a + b\sqrt{2} \ssep a, b \in \mathbb{Z}\}$ and
 
-%% a,bER}.
+\[H=\set[\bigg]{ \begin{bmatrix}a&2b\\b&a\end{bmatrix} \given a,b\in\mathbb{Z}}.\]
 
-%% is a ring isomorphism.
-%% 14. Let Z[\@] = {a + bxfz l a, b e Z} and
+Show that $\mathbb{Z}[\sqrt{2}]$ and $H$ are isomorphic as rings.
 
-%% H=llz ZZl
-
-%% Show that Z[\/2] and H are isomorphic as rings.
-
-
-
-%% a,bEZ}.
 
 %% 15.
 
-%% 16.
+\item[16.] Let $R=\set[\bigg]{\begin{bmatrix}a&b\\0&c \end{bmatrix} \given a,b,c\in\mathbb{Z}}$. Prove or disprove that the mapping $\begin{bmatrix}a&b\\0&c\end{bmatrix}\rightarrow a$ is a ring homomorphism.
 
 %% 17.
 
@@ -267,7 +268,7 @@ field of quotients of $D$) that contains a subring isomorphic to $D$.
 %% Determine all ring homomorphisms from Z6 to Z6. Determine all
 %% ring homomorphisms from Z20 to Z30.
 
-%% Determine all ring isomorphisms from Zn to itself.
+\item[22.] Determine all ring isomorphisms from $\mathbb{Z}_n$ to itself.
 %% Determine all ring homomorphisms from Z to Z.
 
 %% 24.
@@ -276,7 +277,7 @@ field of quotients of $D$) that contains a subring isomorphic to $D$.
 
 %% 26.
 
-%% 27.
+\item[27.] Let $R$ be a ring with unity and let $\phi$ be a ring homomorphism from $R$ onto $S$ where $S$ has more than one element. Prove that $S$ has a unity.
 
 %% 28.
 %% 29.
@@ -347,10 +348,10 @@ field of quotients of $D$) that contains a subring isomorphic to $D$.
 
 %% 1
 
-%% For any integer n > 1, prove that Zn[x]/(x) is isomorphic to Zn.
+\item[37.] For any integer $n > 1$, prove that $\mathbb{Z}_n[x]/\langle x \rangle$ is isomorphic to $\mathbb{Z}_n$.
 
-%% For any integer n >1, prove that (x) is a maximal ideal of Zn[x] if
-%% and only if n is prime.
+\item[38.] For any integer $n >1$, prove that $\langle x \rangle$ is a maximal ideal of $\mathbb{Z}_n[x]$ if
+and only if $n$ is prime.
 
 %% Give an example of a ring homomorphism from a commutative ring
 %% R to a ring S that maps a zero-divisor in R to the unity of S.
@@ -359,7 +360,7 @@ field of quotients of $D$) that contains a subring isomorphic to $D$.
 %% prime subﬁeld to itself.
 
 %% In your head, determine (2 - 1075 + 2)100 mod 3 and (10100 + 1)99 mod 3.
-%% Determine all ring homomorphisms from Q to Q.
+\item[42.] Determine all ring homomorphisms from $\mathbb{Q}$ to $\mathbb{Q}$.
 
 %% Let R and S be commutative rings with unity. If (i) is a homomor-
 %% phism from R onto S and the characteristic of R is nonzero, prove
@@ -377,9 +378,8 @@ field of quotients of $D$) that contains a subring isomorphic to $D$.
 
 %% 49.
 
-%% Let R be a commutative ring of prime characteristic p. Show that the
-
-%% Frobenius map x —> xP is a ring homomorphism from R to R.
+\item[44.] Let $R$ be a commutative ring of prime characteristic $p$. Show that the
+\textit{Frobenius} map $x \rightarrow x^p$ is a ring homomorphism from $R$ to $R$.
 
 %% Is there a ring homomorphism from the reals to some ring Whose
 
@@ -450,8 +450,8 @@ field of quotients of $D$) that contains a subring isomorphic to $D$.
 %% Show that the operation of multiplication deﬁned in the proof of
 %% Theorem 15.6 is well—deﬁned.
 
-%% LetQ[\/2] = {a+b\/2la,bEQ}andQ[\/5] = {a+b\/5l
-%% a, b E Q}. Show that these two rings are not ring-isomorphic.
+\item[56.] Let $\mathbb{Q}[\sqrt{2}] = \left\{a+b\sqrt{2} \ssep a,b\in\mathbb{Q}\right\}$ and $\mathbb{Q}[\sqrt{5}] = \left\{a+b\sqrt{5} \ssep
+ a, b \in \mathbb{Q}\right\}$. Show that these two rings are not ring-isomorphic.
 
 %% Let Z[i] = {a + bi | a, b E Z}. Show that the ﬁeld of quotients of
 %% Z[i] is ring—isomorphic to Q[i] = {r + si | r, s E Q}. (This exercise
@@ -544,3 +544,4 @@ field of quotients of $D$) that contains a subring isomorphic to $D$.
 
 %% Show that Zmn is ring-isomorphic to Zm EB Z]1 when m and n are rela-
 %% tively prime.
+\end{enumerate}

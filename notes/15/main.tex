@@ -5,10 +5,13 @@
 \usepackage{amssymb}
 \usepackage{amsthm}
 \usepackage{graphicx}
+\usepackage{mathtools}
 \usepackage[left=1cm,right=1cm,top=1cm,bottom=1cm]{geometry}
 \usepackage{hyperref}
 \setlength\parindent{0pt} %for no indentation
 \usepackage{tikz}
+\usepackage{maxiplot}
+\usepackage{cool}
 \theoremstyle{plain}
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{lemma}{Lemma}
@@ -38,8 +41,9 @@
 \]}
 \newcommand*\ideal[1]{\langle #1 \rangle}
 \pagenumbering{gobble}
+\DeclarePairedDelimiterX\set[1]\lbrace\rbrace{\def\given{\;\delimsize\vert\;}#1}
 \begin{document}
 \setcounter{section}{14}
 \section{Chapter}
-\input{notes.txt}
+\input{notesV1.1.txt}
 \end{document}
