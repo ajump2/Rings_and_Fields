@@ -1,0 +1,301 @@
+\begin{definition}{Irreducible Polynomial, Reducible Polynomial}
+
+Let $D$ be an integral domain. A polynomial $f(x)$ from $D[x]$ that is
+neither the zero polynomial nor a unit in $D[x]$ is said to be irreducible
+over $D$ if, whenever $f(x)$ is expressed as a product $f(x) = g(x)h(x)$, with
+$g(x)$ and $h(x)$ from $D[x]$, then $g(x)$ or $h(x)$ is a unit in $D[x]$. A nonzero,
+nonunit element of $D[x]$ that is not irreducible over $D$ is called
+reducible over $D$.
+\end{definition}
+
+\textbf{EXAMPLE} 1 The polynomial $f(x) = 2x^2 + 4$ is irreducible over $\mathbb{Q}$
+but reducible over $\mathbb{Z}$, since $2x^2 + 4 = 2(x^2 + 2)$ and neither $2$ nor $x^2 + 2$
+is a unit in $\mathbb{Z}[x]$.
+
+\textbf{EXAMPLE} 2 The polynomial $f(x) = 2x^2 + 4$ is irreducible over $\mathbb{R}$
+but reducible over $\mathbb{C}$.
+
+\textbf{EXAMPLE} 3 The polynomial $x^2 - 2$ is irreducible over $\mathbb{Q}$ but reducible
+over $\mathbb{R}$.
+
+\textbf{EXAMPLE} 4 The polynomial $x^2 + 1$ is irreducible over $\mathbb{Z}_3$ but reducible
+over $\mathbb{Z}_5$.
+
+\begin{theorem}{Reducibility Test for Degrees 2 and 3}
+
+Let $\mathbb{F}$ be a field. If $f(x) \in \mathbb{F}[x]$ and deg f(x) is 2 or 3, then f(x) is
+reducible over $\mathbb{F}$ if and only if $f(x)$ has a zero in $\mathbb{F}$.
+\end{theorem}
+
+\begin{definition}{Content at a Polynomial, Primitive Polynomial}
+
+The \emph{content} of a nonzero polynomial $a_nx^n + a_{n-1}x^{n-1} + \dots + a_0$,
+where the $a$’s are integers, is the greatest common divisor of the integers
+$a_n, a_{n-1},\dots , a_0$. A primitive polynomial is an element of $\mathbb{Z}[x]$ with
+content 1.
+\end{definition}
+
+\begin{lemma}{Gauss's Lemma}
+
+The product of two primitive polynomials is primitive.
+\end{lemma}
+
+\begin{theorem}{Reducibility over $\mathbb{Q}$ Implies Reducibility over $\mathbb{Z}$}
+
+Let $f(x) \in \mathbb{Z}[x]$. If $f(x)$ is reducible over $\mathbb{Q}$, then it is reducible over $\mathbb{Z}$.
+\end{theorem}
+\begin{theorem}{Mod $p$ Irreducibility Test}
+
+Let $p$ be a prime and suppose that $f(x) \in \mathbb{Z}[x]$ with $\textit{deg} f(x) \leq 1$.
+
+Let $\bar{f}(x)$ be the polynomial in $\mathbb{Z}_p[x]$ obtained from $f(x)$ by reducing
+
+all the coefficients of $f(x)$ modulo $p$. If $\bar{f}(x)$ is irreducible over $\mathbb{Z}_p$ and
+$\textit{deg} f(x)= \textit{deg} f(x)$ then $f(x)$ is irreducible over $\mathbb{Q}$.
+\end{theorem}
+\begin{theorem}{Eisenstein's Criterion (1850)}
+
+Let
+$f(x) = a_nx^n + a_{n-1}x^{n-1} + \dots + a_0 \in \mathbb{Z}[x]$.
+
+If there is a prime $p$ such that $p \nmid a_n,p|a_{n-1},\dots,p|a_0$ and $p^2 \nmid a_0$.
+then $f(x)$ is irreducible over $\mathbb{Q}$.
+\end{theorem}
+\begin{corollary}{Irreducibility of $p$th Cyclotomic Polynomial}
+
+For any prime $p$, the $p$th cyclotomic polynomial
+
+$\Phi_p(x)=\frac{x^p-1}{x-1}=x^{p-1}+x^{p-2}+\dots+x+1$
+
+is irreducible over $\mathbb{Q}$.
+\end{corollary}
+
+\begin{theorem} $\langle p(x) \rangle$ is Maximal If and Only If $p(x)$ is Irreducible
+
+Let $\mathbb{F}$ be a field and let $p(x) \in \mathbb{F}[x]$. Then $\langle p(x) \rangle$ is a maximal ideal
+
+in $\mathbb{F} [x]$ if and only if $p(x)$ is irreducible over $\mathbb{F}$.
+\end{theorem}
+\begin{theorem}{Unique Factorization in $\mathbb{Z}[x]$}
+
+Every polynomial in $\mathbb{Z}[x]$ that is not the zero polynomial or a unit
+in $\mathbb{Z}[x]$ can be written in the form $b_1b_2 \dots b_sp_1(x)p_2(x) \dots p_m(x)$,
+where the $b_i$’s are irreducible polynomials of degree 0 and the pl(x)’s
+are irreducible polynomials of positive degree. Furthermore, if
+
+$$b_1b_2 \dots b_sp_1(x)p_2(x) \dots p_m(x) = c_1c_2 \dots c_t q_1(x)q_2(x) \dots q_n(x),$$
+
+where the $b_i$’s and $c_i$’s are irreducible polynomials of degree 0 and the
+$p_i(x)$’s and $q_i(x)$’s are irreducible polynomials of positive degree, then
+$s = t, m = n$, and, after renumbering the $c$’s and $q(x)$’s, we have
+
+$b_i = \pm c_i$ for $i = 1, \dots,s$ and $p_i(x) = \pm q_i(x)$ for $i = 1, \dots , m$.
+\end{theorem}
+%% . Verify the assertion made in Example 2.
+
+%% . Suppose that D is an integral domain and F is a ﬁeld containing D.
+%% If f(x) E D[x] and f(x) is irreducible over F but reducible over D,
+%% what can you say about the factorization of f(x) over D?
+
+%% . Show that a nonconstant polynomial from Z[x] that is irreducible
+%% over Z is primitive. (This exercise is referred to in this chapter.)
+
+%% . Suppose thatf(x) = x" + anilxn’l + - - - + (10 E Z[x]. Ifris ra-
+%% tional and x — r divides f(x), show that r is an integer.
+
+%% Let F be a ﬁeld and let a be a nonzero element of F.
+
+%% a. If af(x) is irreducible over F, prove that ﬁx) is irreducible over F.
+
+%% b. If ﬂax) is irreducible over F, prove that ﬁx) is irreducible over F.
+
+%% c. If f(x + a) is irreducible over F, prove that f(x) is irreducible
+%% over F.
+
+%% (1. Use part c to prove that 8x3 — 6x + l is irreducible over Q.
+
+%% (This exercise is referred to in this chapter.)
+
+%% Let F be a ﬁeld and f(x) E F [x]. Show that, as far as deciding upon
+
+%% the irreducibility of f(x) over F is concerned, we may assume that
+
+%% f(x) is monic. (This assumption is useful when one uses a computer
+
+%% to Check for irreducibility.)
+
+%% Suppose there is a real number r with the property that r + l/r is an
+
+%% odd integer. Prove that r is irrational.
+
+%% Show that the equation x2 + y2 = 2003 has no solutions in the
+
+%% integers.
+
+%% Explain how the Mod p Irreducibility Test (Theorem 17.3) can be
+
+%% used to test members of Q[x] for irreducibility.
+
+%% Suppose that ﬁx) E Z p[x] and f(x) 1s irreducible over Zp, where p is
+
+%% a prime If deg f(x)— — n, prove that Z p[x]/( f(x)) 1s a field with p”
+
+%% elements.
+
+%% . Construct a ﬁeld of order 25.
+%% . Construct a ﬁeld of order 27.
+%% . Show that x3 + x2 + x + l is reducible over Q. Does this fact con-
+
+%% tradict the corollary to Theorem 17.4?
+
+%% . Determine which of the polynomials below is (are) irreducible
+
+%% over Q.
+
+%% a. x5 + 9x4 +12x2 + 6
+
+%% b. x4 + x + 1
+
+%% c. x4 + 3x2 + 3
+
+%% d. x5 + 5x2 + 1 a
+%% e. (5/2)x5 + (9/2)x4 + 15x3 + (3/7)x2 + 6x + 3/14
+
+%% . Show that x4 + l is irreducible over Q but reducible over R. (This
+
+%% exercise is referred to in this chapter.)
+
+%% . Prove that x4 + 15x3 + 7 is irreducible over Q
+%% . Show that x4 + l is reducible over Zp for every prime p. (This ex-
+
+%% ercise is referred to in this chapter.)
+
+%% . Show that x2 + x + 4 is irreducible over Z11.
+%% . Let f(x) = x3 + 6 E Z7[x]. Write f(x) as a product of irreducible
+
+%% polynomials over Z7.
+
+%% . Let f(x) = x3 + x2 + x + l E Z2[x]. Write f(x) as a product of irre-
+
+%% ducible polynomials over Z2.
+
+%% 2
+
+%% 21. and all the zeros and their multiplicities of x5 + 4x4 + 4x3 — x —
+
+%% 4x + loverZ.
+
+%% . Find all zeros of f(x) — 3x2 + x + 4 over Z7 by substitution. Find all
+
+%% zeros of f(x) by using the quadratic formula (— b_ + \/b2 — 4ac)
+%% (2a) 1 (all calculations are done in Z7). Do your answers agree?
+%% Should they? Find all zeros of g(x) = 2x2 + x + 3 over Z5 by sub-
+%% stitution. Try the quadratic formula on g(x). Do your answers agree?
+%% State necessary and sufﬁcient conditions for the quadratic formula
+%% to yield the zeros of a quadratic from Zp[x], where p is a prime
+%% greater than 2.
+
+%% . Let p be a prime.
+
+%% a.Show that the number of reducible polynomials over Zp of the
+%% formx2 + ax + b isp(p + l)/2.
+%% b. Determine the number of reducible quadratic polynomials over Zp.
+
+%% . Let p be a prime.
+
+%% a. Determine the number of irreducible polynomials over Zp of the
+%% form x2 + ax + b.
+
+%% b. Determine the number of irreducible quadratic polynomials
+%% over Zp.
+
+%% . Show that for every prime p there exists a ﬁeld of order p2.
+%% . Prove that, for every positive integer n, there are infinitely many
+
+%% polynomials of degree n in Z[x] that are irreducible over Q.
+
+%% . Show that the ﬁeld given in Example 11 in this chapter is isomor-
+
+%% phic to the ﬁeld given in Example 9 in Chapter 13.
+
+%% . Let f(x) E Zp[x]. Prove that if f(x) has no factor of the form x2 +
+
+%% ax + b, then it has no quadratic factor over Zp.
+
+%% . Find all monic irreducible polynomials of degree 2 over Z3.
+%% . Given that 7T is not the zero of a nonzero polynomial with rational
+
+%% coefﬁcients, prove that 7T 2 cannot be written in the form a71- + b,
+%% where a and b are rational.
+
+%% . (Rational Root Theorem) Let
+
+%% f(X)=ax”+a,x"’1+---+a ezm
+%% 71 n1 0
+
+%% and an i O. Prove that if r and s are relatively prime integers and
+%% f(r/s) = 0, then r I do and s | an.
+
+%% . Let F be a ﬁeld and let p(x), a1(x), a2(x), . . . , ak(x) E F [x], where
+
+%% p(x) is irreducible over F. If p(x) | a1(x)a2(x) - - - ak(x), show that
+%% p(x) divides some ai(x). (This exercise is referred to in the proof of
+%% Theorem 17.6.)
+
+%% . Let F be a ﬁeld and p(x) E F [x]. Use Theorem 14.4 to prove that if
+
+%% (p(x)) is a maximal ideal in F [x], then p(x) is irreducible over F (see
+%% Theorem 17.5).
+
+%% . pr is a prime, prove that )C’”1 — x1272 + x”’3 — --' — x + 1 is
+
+%% irreducible over Q.
+
+%% . Let F be a field and let p(x) be irreducible over F. If E is a field
+
+%% that contains F and there is an element a in E such that p(a) = 0,
+%% show that the mapping ¢: F [x] —> E given by f(x) —>f(a) is a ring
+%% homomorphism with kernel (p(x)). (This exercise is referred to in
+%% Chapter 20.)
+
+%% . Prove that the ideal (x2 + l) is prime in Z[x] but not maximal in Z[x].
+%% . Let F be a ﬁeld and let p(x) be irreducible over F. Show that {a +
+
+%% (p(x)) | a E F} is a subﬁeld of F[x]/(p(x)) isomorphic to F. (This
+%% exercise is referred to in Chapter 20.)
+
+%% . Let F be a ﬁeld and let f(x) be a polynomial in F [x] that is reducible
+
+%% over F. Prove that (f(x)) is not a prime ideal in F [x].
+
+%% . Example 1 in this chapter shows the converse of Theorem 17.2 is
+
+%% not true. That is, a polynomial f(x) in Z[x] can be reducible over Z
+%% but irreducible over Q. State a condition on f(x) that makes the con-
+%% verse true.
+
+%% . Carry out the analysis given in Example 12 for a pair of tetrahe-
+
+%% drons instead of a pair of cubes. (Deﬁne ordinary tetrahedral dice
+%% as the ones labeled 1 through 4.)
+
+%% 41.
+
+%% 42.
+
+%% 43.
+
+%% Suppose in Example 12 that we begin with n (n > 2) ordinary dice
+%% each labeled 1 through 6, instead of just two. Show that the only
+%% possible labels that produce the same probabilities as n ordinary
+%% dice are the labels 1 through 6 and the Sicherman labels.
+
+%% Show that one two-sided die labeled with 1 and 4 and another 18—
+%% sided die labeled with 1, 2, 2, 3, 3, 3, 4, 4, 4, 5, 5, 5, 6, 6, 6, 7, 7, 8
+%% yield the same probabilities as an ordinary pair of cubes labeled
+%% 1 through 6. Carry out an analysis similar to that given in Example
+%% 12 to derive these labels.
+
+%% In the game of Monopoly, would the probabilities of landing on
+%% various properties be different if the game were played with
+%% Sicherman dice instead of ordinary dice? Why?
