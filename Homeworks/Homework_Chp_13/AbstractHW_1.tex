@@ -1,0 +1,122 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage[left=1cm,right=1cm,top=1cm,bottom=1cm]{geometry}
+\setlength\parindent{0pt} %for no indentation
+\usepackage{tikz}
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{definition}{Definition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{case}{Case}
+\newtheorem{subcase}{Subcase}[case]
+\newtheorem{claim}{Claim}
+\newtheorem{subclaim}{Subclaim}[claim]
+\newtheorem{fact}{Fact}
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{constr}{Construction}
+\newtheorem{question}{Question}
+\newtheorem{algo}{Algorithm}
+\newtheorem{conjecture}{Conjecture}
+%\usepackage{skull}
+\renewcommand{\qedsymbol}{\begin{flushright}
+\sc q.e.d.
+\end{flushright}}
+\newtheorem{remark}{Remark}
+
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+   \node[shape=circle,draw,inner sep=1pt] (char) {#1};}}
+\newcommand{\contra}{\[
+\Rightarrow\!\Leftarrow
+\]}
+\pagenumbering{gobble}
+\begin{document}
+Adam Jump\\
+MATH 385\\
+HW $\#1$\\
+
+\textbf{Chapter 13 Problems:} $3,6,\circled{7},\circled{8},9,12,\circled{17},19,21,\circled{22},23,40,46,48,54$\\
+\begin{itemize}
+\item[7.] Show that the three properties listed in Exercise 6 are valid for $\mathbb{Z}_p$, where p is prime.\\
+
+To reiterate, those properties are:
+
+\begin{itemize}
+\item[\textbf{a.}] $a^2=a$ implies $a=0$ or $a=1$.
+\item[\textbf{b.}] $ab=0$ implies $a=0$ or $b=0$.
+\item[\textbf{c.}] $ab=ac$ and $a\neq 0$ imply $b=c$.
+\end{itemize}
+\proof{$ $\newline
+\begin{itemize}
+\item[\textbf{(a.)}] B.W.O.C. Assume $a^2\mod_p=a$ and $a\neq 0 \text{ and } a\neq 1$\\
+$\implies a^2=(p+1)a$\\
+$\implies ap+a\mod_p=0+a=a$\\
+$\text{however } p+1\not\in\mathbb{Z}_p$
+\contra
+$\therefore$ $a=0$ or $a=1$\\
+\item[\textbf{(b.)}] B.W.O.C. Assume $a\neq 0$ and $b\neq 0$\\
+$\implies a\cdot b = k\cdot p$, for $k\in \mathbb{N}$\\
+$\implies a \text{ or } b = p\not\in\mathbb{Z}_p$
+\contra
+$\therefore$ $a=0$ or $b=0$\\
+\item[\textbf{(c.)}] $ab=ac$, $a\neq0 \implies b=c$\\
+%$a^{-1}\in\mathbb{Z}_p$\\
+%$\implies a^{-1}ab=a^{-1}ac$, as $\mathbb{Z}_p$ is a field and so every non-zero element in a unit.\\
+%$\implies b=c$\\
+$\implies ab=ac$\\
+$\implies ab-ac=0$\\
+$\implies a(b-c)=0$\\
+and we know that $a\neq 0$\\
+$\implies b-c=0$\\
+$\therefore b=c$
+\end{itemize}
+\qedsymbol
+}
+\newpage
+\item[8.] Show that a ring is commutative if it has the property that $ab=ca$ implies $b=c$ when $a\neq 0$.\\
+This is actually a chain of implications of the form: $$ab=ca,a\neq 0\implies b=c \implies R \text{ is commutative}$$
+What we need to show is that for any arbitrary element $x\in R$, $ax=xa$.
+\proof{$ $\newline
+We know that
+$ab=ca, a\neq 0 \implies b=c$.\\
+Using $b=c$,\\
+$\implies ab=ac$
+however, by our assumption, $ab=ca$, this implies that,\\ $ab=ca=ac$\\
+$\therefore ca=ac$, which shows $R$ is commutative.
+\qedsymbol
+}
+
+\item[17.] Show that a ring that is cyclic under addition is commutative.
+
+\proof{$ $\newline
+Let $R=\langle a\rangle,\left\vert R \right\vert=n, n_1,n_2<n,\text{ and }, n_1<n_2 \text{ for } n_1,n_2\in\mathbb{Z}$\\
+which means $R=\left\{i\cdot a\in R ~\vert ~ i\in\left[n\right]\right\}$,\\
+$(n_1\cdot a)+(n_2\cdot a)$\\
+$\implies (a+\dots+a)+(a+\dots+a)$\\
+which by associativity implies,\\
+$\implies (n_1-(n_1-n_2))\cdot a+(n_2-(n_2-n_1))\cdot a$
+\qedsymbol
+}
+
+\item[22.] Let $R$ be a commutative ring with unity and let $U(R)$ denote the set of units of $R$. Prove that $U(R)$ is a group under the multiplication of $R$. (This group is called the \textit{group of units of $R$.})
+Let $a,b\in U(R)$,\\
+$a^{-1},b^{-1}\in U(R)$, by definition \textit{unit},\\
+Show $a\cdot b^{-1}\in U(R)$,
+
+\proof{$ $\newline
+We know that $a,a^{-1},b,b^{-1}\in U(R)$.\\
+This implies that $a\cdot b^{-1}\cdot b\cdot a^{-1}\in R$,\\
+$\implies a\cdot 1 \cdot a^{-1}$,\\
+$\implies a\cdot a^{-1} = 1$,\\
+$\implies a\cdot b^{-1}\in U(R)$,\\
+$\therefore U(R)\leq R$
+\qedsymbol
+}
+\end{itemize}
+\end{document}
