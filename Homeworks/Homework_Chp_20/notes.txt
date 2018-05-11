@@ -1,0 +1,46 @@
+5. Find the splitting field of $$x^4+x^2+1=(x^2+x+1)(x^2-x+1),$$ over $\mathbb{Q}$.\\
+
+The quadratics $(x^2+x+1)$ and $(x^2-x+1)$ have zeros at $\frac{1}{2}\pm\frac{\sqrt{3}}{2}i$ and $-\frac{1}{2}\pm\frac{\sqrt{3}}{2}i$, respectively.
+We define the splitting field of $x^4+x^2$ over $\mathbb{Q}$ as $\mathbb{Q}(\frac{1}{2}+\frac{\sqrt{3}}{2}i,-\frac{1}{2}+\frac{\sqrt{3}}{2}i)$.\\
+
+13. Write $x^7-x$ as a product of linear factors over $\mathbb{Z}_3$. Do the same for $x^{10}-x$.\\
+
+We can write $x^7-x=x(x^6-1)=x(x-1)(x^5+x^4+x^3+x^2+x+1)=x(x-1)(x^2-x+1)(x^2+x+1)(x+1)$,
+which simplifies to
+$x(x-1)(x+1)(x+1/2+\sqrt{3}i/2)(x+1/2-\sqrt{3}i/2)(x-1/2+\sqrt{3}i/2)(x-1/2-\sqrt{3}i/2)=x(x+1)^3(x+2)^2$.\\
+
+Evaluating $x^{10}-x$ with modulus 3, we see that $x^{10}-x = x (x+2)^9$.\\
+
+18. Express $(3+4\sqrt{2})^{-1}$ in the form $a+b\sqrt{2}$, where $a,b\in\mathbb{Q}$.\\
+
+So we'll rewrite $(3+4\sqrt{2})^{-1}$ as
+$\frac{1}{(3+4\sqrt{2})}\frac{3-4\sqrt{2}}{3-4\sqrt{2}}$.
+This simplifies to $-\frac{3}{23}+\frac{4\sqrt{2}}{23}$, which is what we wanted.\\
+
+20. Find a polynomial $p(x)$ in $\mathbb{Q}[x]$ such that
+$\mathbb{Q}(\sqrt{1+\sqrt{5}})$ is ring isomorphic to
+$\mathbb{Q}[x]/\langle p(x) \rangle$.\\
+
+We begin by evaluating $x=\sqrt{1+\sqrt{5}}$,
+which implies that $x^2=1+\sqrt{5}$ or $x^2-1=\sqrt{5}$.
+This further reduces to $(x^2-1)^2-5=x^4-2x^2-4$,
+which implies that $\mathbb{Q}[x]/\langle x^4-2x^2-4 \rangle$ is ring isomorphic to $\mathbb{Q}(\sqrt{1+\sqrt{5}})$.\\
+
+28. Express $x^8-x$ as a product of irreducibles over $\mathbb{Z}_2$.\\
+
+To begin, we see that $x^8-x = x(x^7-1)$.
+Which further reduces to $x(x+1)(x^3+x+1)(x^3+x^2+1)$.
+
+30. For any prime $p$, find a field of characteristic $p$ that is not perfect.\\
+
+Let $\pi$ be transcendental over $F_p$, and consider $F_p(\pi)$. Note that $F_p(\pi)/\langle \pi \rangle$ is a field with characteristic $p$. However, by definition of being transcendental over $F_p$, there is no element $a\in Z_p$ such that $a^p=\pi$, which shows $F_p/\langle \pi \rangle$ is not perfect.\\
+
+35. Let $F$ be a field of characteristic $p \neq 0$.
+Show that the polynomial $f(x)=x^{p^n}-t$.
+Prove that $f(x)$ is irreducible over $F$ and $F$ has a multiple zero in $K=F[x]/\langle x^p-t\rangle$.\\
+
+
+
+40. Show that $\mathbb{Q}(\sqrt{7},i)$ is the splitting field for $x^4-6x^2-7$.\\
+
+We see this factors to $\left(x^2-7\right) \left(x^2+1\right)$, which implies that $\mathbb{Q}[x]/\langle x^2-7 \rangle[x]$ and $\mathbb{Q}[x]/\langle x^2+1 \rangle$.

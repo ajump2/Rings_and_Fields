@@ -1,0 +1,15 @@
+2. If $m$ divides $n$, show that $[GF(p^n):GF(p^m)]=n/m$.\\
+
+3. Draw the lattice of subfields of $GF(64)$.\\
+
+6. Prove that every non-identity element in $GF(32)^*$ is a generator of $GF(32)^*$.\\
+
+10. How many elements of the cyclic group $GF(81)^*$ are generators?\\
+
+12. Prove that the rings $\mathbb{Z}_3[x]/\langle x^2 + x +2 \rangle$ and $\mathbb{Z}_3/\langle x^2+2x+2 \rangle$ are isomorphic.\\
+
+13. Show that the \textit{Frobenius mapping} $\phi : GF(p^n)\rightarrow GF(p^n)$, given by $a\rightarrow a^p$, is a ring automorphism of order $n$ (that is, $\phi^n$ is the identity mapping).\\
+
+16. Find the smallest field that has exactly 6 subfields.\\
+
+31. How does the subfield lattice of $GF(2^{30})$ compare with the subfield lattice of $GF(3^{30})$.

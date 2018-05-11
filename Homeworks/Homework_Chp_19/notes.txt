@@ -1,0 +1,109 @@
+3. Verify the set in Example 6 is a subspace. Find a basis for this subspace.
+Is $\{x^2+x+1,x+5,3\}$ a basis?\\
+
+Let $S = \{a_2x^2+a_1x+a_0 \vert a_0,a_1,a_2\in\mathbb{R}\}$,
+where $u,v\in B$, and $c\in \mathbb{R}$.
+We can see that $c(u+v)=cu+cv$.
+Likewise, for $c_1,c_2\in\mathbb{R}$, $(c_1+c_2)u = c_1u+c_2 u$.
+Which shows that $S$ is a subspace.
+
+Next,
+we'd like to find a basis for this subspace,
+which we see could be $\{x^2,x,1\}$.
+Given $a,b,c\in\mathbb{R}$,
+we see that $ax^2+bx+c=0$ is only true for $a=b=c=0$.\\
+
+Evaluating whether $\{x^2+x+1,x+5,3\}$ is a basis, given $a,b,c\in\mathbb{R}$,
+we evaluate $a(x^2+x+1)+b(x+5)+3c=0$,
+which can be reduced to $ax^2+(a+b)x+a+5b+3c = 0$.
+This gives roots of the form
+$\frac{-(a+b)\pm\sqrt{(a+b)^2-4a(a+5b+3c)}}{2a}=\frac{-a-b\pm\sqrt{b^2-3a^2-18ab-12ac}}{2a}$,
+which only has solutions over the $\mathbb{C}$.\\
+
+5. Determine whether or not the set $\{(2,-1,0),(1,2,5),(7,-1,5)\}$ is linearly independent over $\mathbb{R}$.\\
+
+Given $a,b,c\in\mathbb{R}$, evaluate whether $a(2,-1,0)+b(1,2,5)+c(7,-1,5)=(0,0,0)$.
+This reduces to $(2a+b+7c,-a+2b+5c,5b+5c)=(0,0,0)$. We rewrite this as a system of linear equations given as,
+$$\begin{bmatrix}
+ 7 & 1 & 2 \\
+ 5 & 2 & -1 \\
+ 5 & 5 & 0 \\
+\end{bmatrix} \text{ which row reduces to }
+\begin{bmatrix}
+ 1 & 0 & 0 \\
+ 0 & 1 & 0 \\
+ 0 & 0 & 1 \\
+\end{bmatrix}.$$
+This shows that $\{(2,-1,0),(1,2,5),(7,-1,5)\}$ is linearly independent over $\mathbb{R}$.\\
+
+6. Determine whether or not the set
+$$B = \left\{\begin{bmatrix}
+2 & 1\\
+1 & 0\\
+\end{bmatrix},
+\begin{bmatrix}
+0 & 1\\
+1 & 2\\
+\end{bmatrix},
+\begin{bmatrix}
+1 & 1\\
+1 & 1\\
+\end{bmatrix}\right\}$$
+is linearly independent over $\mathbb{Z}_5$.
+Let $a,b,c\in\mathbb{Z}_5$, we evaluate $$\begin{bmatrix}
+  2a+c & a+b+c\\
+  a+b+c & 2b+c\\
+\end{bmatrix}=
+\begin{bmatrix}
+  0 & 0 \\
+  0 & 0 \\
+\end{bmatrix}.
+$$
+Evaluating $a=b=1$ and $c=3$ gives,
+$$\begin{bmatrix}
+  2+3 & 1+1+3\\
+  1+1+3 & 2+3\\
+\end{bmatrix} \text{ which is reduced modulo 5 to }
+\begin{bmatrix}
+  0 & 0\\
+  0 & 0\\
+\end{bmatrix},
+$$ which shows that $B$ is linearly dependent over $\mathbb{Z}_5$.\\
+
+11. If $V$ is a vector space over $F$ of dimension 5 and $U$ and $W$ are subspaces of $V$ of dimension 3,
+prove that $U\cap W\neq \{0\}$. Generalize.\\
+
+Let $u_1,u_2,u_3\in U$ and $w_1,w_2,w_3\in W$.
+As a result of each $u_i,w_i\in V$,
+we know that there exists at least one $u_i$,
+and at least one $w_j$ such that $u_i=w_j$.
+This shows that $U\cap W \neq \{0\}$.\\
+
+
+14. Let $V=\mathbb{R}^3$ and $W=\{(a,b,c)\in V \vert a^2+b^2=c^2\}$.
+Is $W$ a subspace of $V$? If so, what is its dimension?\\
+
+$W$ is effectively the set of right triangles.
+What's problematic is if we take $(1,\sqrt{2},\sqrt{3}),(2\sqrt{2},2,2\sqrt{3})$,
+we see that $(1,2,3)+(8,4,12)=(9,6,15)$,
+but $((1+\sqrt{2})^2,(2+\sqrt{2})^2,(\sqrt{3}+2\sqrt{3})^2)=(1+4\sqrt{2}+8,4+4\sqrt{2}+2,9(3))$.
+When evaluated under our condition is $1+4\sqrt{2}+8+4+4\sqrt{2}+2=9(3)$ or $15+8\sqrt{2} \neq 27$.
+This shows that $W$ is not a subspace of $V$.
+
+19. Let $B$ be a subset of a vector space $V$. Show that $B$ is a basis for $V$ if and only if every member of $V$ is a unique linear combination of the elements of $B$.\\
+
+Consider $\sum (a_i-b_i)v_i=0$. $B$ is a linearly independent set if there exists $a_i-b_i\neq 0$. This means that $\sum (a_i-b_i)v_i=0$ is a nontrivial linear combination of $\vec{0}$, which cannot be linearly independent. This implies that all $a_i=b_i$, which satisfies the criteria for uniqueness.\\
+
+Now let's consider all $v\in V$, where each $v$ is a unique linear combination of $B$. Show $B$ is a basis. First of all, we know that Span$(B)=V$. Now let $a_i \in F$ with $a_1\vec{v}_1+a_2\vec{v}_2+\dots+a_n\vec{v}_n=\vec{0}$. Note that $a_i=0$ is a solution and by uniqueness $a_i=0$ is the only solution, which shows $B$ is linearly independent and therefore a basis for $V$.\\
+
+27. Define the vector space analog of group homomorphism and ring homomorphism. Such a mapping is called a \textit{linear transformation}. Define the vector space analog of group isomorphism and ring isomorphism.\\
+
+Let $T$ be a mapping from the vector space $V_1$ to $V_2$. We define $T:V_1\rightarrow V_2$ to be as follows. For vectors $\vec{v}\in V_1$ and $\vec{u}\in V_2$, $$T(\vec{v}+\vec{u})=T(\vec{v})+T(\vec{u})$$ and, $$T(a\vec{v})=aT(\vec{v}).$$\\
+
+28. Let $T$ be a linear transformation from $V$ to $W$. Prove that the image of $V$ under $T$ is a subspace of $W$.\\
+
+Let $u,v\in V$ and $a\in F$. Evaluate $T(u)+T(v)=T(u+v)\in T(V)$, and $aT(u)=T(au)\in T(V)$.\\
+
+37. Let $V$ be a vector space over an infinite field, $F$. Prove that $V$ is not the union of finitely many proper subspaces of $V$.\\
+
+Embellishing on the answer found in the back of the book, suppose that $V=\cup_{i=1}^n V_i$ where $n$ is minimal (i.e. the subspaces $V_1,\dots,V_n$ form the smallest collection of subspaces equal to $V$ under union). Each $V_i$ is not the union of any number of $V_j,j\neq i$, else $n$ is not minimal. Pick $v_1\in V_1$ and $v_2\in V_2$. Consider the infinite set $L=\{v_1+av_2 \vert a \in F\}$. Now suppose that $u=v_1+av_2$ and $w=v_1+bv_2$, which implies that $u-w = (a-b)v_2$ is an element of $V_2$. However, $bu-aw=(bv_1+abv_2-av_1-abv_2)=(b-a)v_1$, which is an element of $V_1$. This shows that each member of $L$ is contained in at most one $V_i$. Immediately, $\cup_{i=1}^nV_i$ contains at most $n$ elements of $L$. Under our assumption, $\cup_{i=1}^nV_i=V$, but $V$ must contain $L$, which shows that $V$ is not the union of any number of subspaces of $V$.

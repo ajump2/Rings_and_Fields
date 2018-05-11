@@ -1,0 +1,23 @@
+4. Let $E$ be an algebraic extension of $F$.
+If every polynomial in $F[x]$ splits in $E$, show that $E$ is algebraically closed.\\
+
+
+
+5. Suppose that $F$ is a field and every irreducible polynomial in $F[x]$ is linear.
+Show that $F$ is algebraically closed.
+
+6. Suppose that $f(x)$ and $g(x)$ are irreducible over $F$ and that deg$f(x)$ and deg$g(x)$ is irreducible over $F(a)$
+
+9. Suppose that $E$ is an extension $F$ of prime degree. Show that, for every $a$ in $E$, $F(a)=F$ or $F(a)=E$.
+
+11. Without using the Primitive Element Theorem, prove that if $[K:F]$ is prime, then $K$ has a primitive element.
+
+14. Prove that $\mathbb{Q}(\sqrt{2},\sqrt[3]{2})=\mathbb{Q}(\sqrt[6]{2}).$
+
+22. Prove that $\pi^2-1$ is algebraic over $\mathbb{Q}(\pi^3)$.
+
+28. Suppose that $[E:\mathbb{Q}]=2$. Show that there is an integer $d$ such that $E=\mathbb{Q}(\sqrt{d})$ where $d$ is not divisible by the square of any prime.
+
+31. If $\alpha$ and $\beta$ are transcendental over $\mathbb{Q}$, show that either $\alpha\beta$ or $\alpha + \beta$ is also transcendental over $\mathbb{Q}$.
+
+49. Prove that there are no positive integers $m$ and $n$ such that $\sqrt{2^m}=\pi^n$.
